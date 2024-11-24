@@ -1,0 +1,22 @@
+/* Asegurar que la fila ocupe el 100% de la altura disponible */
+.container {
+    min-height: 25vh; /* Asegura que la altura mínima del contenedor sea de 100% del viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Hacer que ambas columnas tengan la misma altura */
+  .row {
+    width: 100%;
+    display: flex;
+    align-items: stretch; /* Asegura que las columnas tengan la misma altura */
+  }
+  
+  /* Ajustar la imagen para que se ajuste correctamente */
+  .col-md-6 img {
+    object-fit: cover; /* Asegura que la imagen cubra completamente la columna */
+    height: 100%;
+    width: 100%;
+  }
+  
