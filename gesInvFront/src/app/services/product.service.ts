@@ -24,7 +24,11 @@ export class ProductService {
 
   // Eliminar producto por ID
   deleteProductById(productId: string): Observable<any> {
-    return this.http.delete<any>(`${BASE_URL}product?product_id=${productId}`);
+    const body = { product_id: productId }; // Enviar el ID del producto en el cuerpo de la solicitud
+    return this.http.request('delete', `${BASE_URL}product`, {
+      body, // El cuerpo con el product_id
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' }) // Especificamos que estamos enviando JSON
+    });
   }
 
   // Crear un nuevo producto
