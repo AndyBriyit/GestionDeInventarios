@@ -1,0 +1,16 @@
+<div class="container mt-4">
+    <h2>Detalles del Producto</h2>
+    <div *ngIf="product">
+      <p><strong>Código:</strong> {{ product.product_id }}</p>
+      <p><strong>Nombre:</strong> {{ product.product_name }}</p>
+      <p><strong>Descripción:</strong> {{ product.product_description }}</p>
+      <p><strong>Categoría:</strong> {{ product.product_category }}</p>
+      <p><strong>Cantidad:</strong> {{ product.product_quantity }}</p>
+      <p><strong>Precio:</strong> {{ product.product_price | currency }}</p>
+    </div>
+    <div *ngIf="!product">
+      <p>Cargando datos del producto...</p>
+    </div>
+    <button class="btn btn-primary mt-3" (click)="exportToPDF()">Exportar datos en PDF</button>
+  </div>
+  
