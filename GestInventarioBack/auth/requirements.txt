@@ -1,0 +1,32 @@
+argon2-cffi==21.3
+argon2-cffi-bindings==21.2
+
+djangorestframework==3.14
+djangorestframework-api-response
+
+boto3==1.24
+botocore==1.27
+eth-account==0.5
+channels==3.0
+confluent-kafka==1.8
+Django==3.2 # Corrige "DJango" a "Django"
+django-ckeditor==6.2
+django-cors-headers==3.13
+django-environ==0.9 # Elimina los espacios alrededor del igual
+django-redis==5.2  # Elimina los espacios alrededor del igual
+django-storages==1.13 # Elimina los espacios alrededor del igual
+jsonpickle==3.0 # Elimina los espacios alrededor del igual
+djangorestframework-simplejwt==4.8 # Elimina los espacios alrededor del igual
+djoser==2.1 # Elimina los espacios alrededor del igual
+web3==5.31 # Elimina los espacios alrededor del igual
+gunicorn==20.1 # Elimina los espacios alrededor del igual
+Pillow==9.3  # Elimina los espacios alrededor del igual
+psycopg2==2.9 # Elimina los espacios alrededor del igual
+python-slugify==6.1  # Elimina los espacios alrededor del igual
+PyJWT==2.5  # Elimina los espacios alrededor del igual
+stripe==4.2  # Elimina los espacios alrededor del igual
+social-auth-app-django==4.0 # Elimina los espacios alrededor del igual
+social-auth-core==4.3  # Elimina los espacios alrededor del igual
+
+whitenoise==6.2 # Elimina los espacios alrededor del igual
+uvicorn==0.20 # Elimina los espacios alrededor del igual

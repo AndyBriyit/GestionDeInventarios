@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  # Django app
+  backend_auth:
+    container_name: gesinventarios_auth
+    build: 
+    volumes:
+      - ./auth:/app
+    ports:
+      - 8000:8000
+  # redis
+  # Kafka Queue
