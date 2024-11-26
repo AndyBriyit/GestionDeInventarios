@@ -3,7 +3,7 @@
 
 <div class="container mt-5 d-flex justify-content-center">
   <div class="card shadow-lg" style="width: 40rem; border-radius: 10px; overflow: hidden;">
-    <div class="card-header bg-success text-white text-center">
+    <div class="card-header bg-primary text-white text-center">
       <h3 class="mb-0">Nuevo Producto</h3>
     </div>
     <div class="card-body p-4 bg-light">
@@ -26,12 +26,12 @@
           <div class="col-md-6 mb-3">
             <label for="quantity" class="form-label fw-bold">Cantidad*</label>
             <input type="number" id="quantity" class="form-control" placeholder="Cantidad disponible en inventario" 
-              [(ngModel)]="product.product_quantity" name="product_quantity" required #product_quantity="ngModel">
+              [(ngModel)]="product.product_quantity" name="product_quantity" required #product_quantity="ngModel" min="0">
           </div>
           <div class="col-md-6 mb-3">
             <label for="price" class="form-label fw-bold">Precio*</label>
             <input type="number" id="price" class="form-control" placeholder="Precio Unitario del producto" 
-              [(ngModel)]="product.product_price" name="product_price" required #product_price="ngModel">
+              [(ngModel)]="product.product_price" name="product_price" required #product_price="ngModel" min="0">
           </div>
         </div>
         <div class="row">
@@ -49,9 +49,9 @@
               [(ngModel)]="product.product_description" name="product_description"></textarea>
           </div>
         </div>
-        <div class="d-flex justify-content-between">
-          <button type="button" class="btn btn-secondary" (click)="resetForm()">Cancelar</button>
-          <button type="submit" class="btn btn-secondary" [disabled]="!productForm.form.valid">Registrar</button>
+        <div class="d-flex justify-content-center"> 
+          
+          <button type="submit" class="btn btn-secondary w-100" [disabled]="!productForm.form.valid">Registrar</button>
         </div>
       </form>
       
