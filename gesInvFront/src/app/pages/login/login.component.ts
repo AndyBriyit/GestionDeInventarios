@@ -25,6 +25,7 @@ export class LoginComponent implements OnInit {
       }
     });
   }
+  // redirige al formulario de cognito
   login(): void {
     this.oidcSecurityService.authorize();
   }
