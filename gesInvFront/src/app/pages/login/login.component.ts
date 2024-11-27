@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OidcSecurityService } from 'angular-auth-oidc-client';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,16 +13,17 @@ export class LoginComponent implements OnInit {
   userData$ = this.oidcSecurityService.userData$;
 
   configuration$ = this.oidcSecurityService.getConfiguration();
-  constructor(private oidcSecurityService: OidcSecurityService) {}
+  constructor(private oidcSecurityService: OidcSecurityService,private router: Router) {}
 
   ngOnInit(): void {
-    this.oidcSecurityService.isAuthenticated$.subscribe(
-      ({ isAuthenticated }) => {
-        this.isAuthenticated = isAuthenticated;
+    this.oidcSecurityService.isAuthenticated$.subscribe(({ isAuthenticated }) => {
+      this.isAuthenticated = isAuthenticated;
 
-        console.warn('authenticated: ', isAuthenticated);
+      if (isAuthenticated) {
+        // Redirige al inventario tras autenticación
+        this.router.navigate(['/inventory']);
       }
-    );
+    });
   }
   login(): void {
     this.oidcSecurityService.authorize();
