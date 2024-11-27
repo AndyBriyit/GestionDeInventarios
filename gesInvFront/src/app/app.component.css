@@ -1,0 +1,24 @@
+/* Estilos para el enlace de logout */
+.logout-link {
+    color: #ffffff;  /* Color blanco */
+    font-size: 1.2rem;  /* Tamaño de texto más grande */
+    font-weight: bold;  /* Texto en negrita */
+    text-decoration: none;  /* Sin subrayado */
+    padding: 10px 20px;  /* Espaciado alrededor del texto */
+    border-radius: 25px;  /* Bordes redondeados */
+    transition: background-color 0.3s, transform 0.2s;  /* Transiciones suaves */
+  }
+  
+  .logout-link:hover {
+    background-color: #e65f51;  /* Rojo cuando pasa el mouse */
+    transform: scale(1.05);  /* Aumenta el tamaño cuando pasa el mouse */
+  }
+  
+  .logout-link:focus {
+    outline: none;  /* Elimina el contorno de enfoque */
+  }
+  
+  .logout-link:active {
+    background-color: #c0392b;  /* Rojo más oscuro al hacer clic */
+  }
+  

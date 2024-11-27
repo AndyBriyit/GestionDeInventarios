@@ -16,6 +16,9 @@ import { ProductViewComponent } from './pages/product-view/product-view.componen
 import { ConfirmDialogComponent } from './pages/confirm-dialog/confirm-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
+import { AuthConfigModule } from './auth/auth-config.module';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +40,9 @@ import { MatButtonModule } from '@angular/material/button';
     FormsModule,
     MatDialogModule,
     MatButtonModule,
+    AuthConfigModule,
+    MatFormFieldModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

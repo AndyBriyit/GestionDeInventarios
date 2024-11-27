@@ -1,16 +1,35 @@
 <div class="container mt-4">
-    <h2>Detalles del Producto</h2>
-    <div *ngIf="product">
-      <p><strong>Código:</strong> {{ product.product_id }}</p>
-      <p><strong>Nombre:</strong> {{ product.product_name }}</p>
-      <p><strong>Descripción:</strong> {{ product.product_description }}</p>
-      <p><strong>Categoría:</strong> {{ product.product_category }}</p>
-      <p><strong>Cantidad:</strong> {{ product.product_quantity }}</p>
-      <p><strong>Precio:</strong> {{ product.product_price | currency }}</p>
+  <h2 class="text-center mb-4" style="font-family: 'Arial', sans-serif;">Detalles del Producto</h2>
+
+  <div *ngIf="product" class="card shadow-lg">
+    <div class="card-body">
+      <!-- Nombre del producto más grande -->
+      <h3 class="card-title text-primary" style="font-size: 2rem; font-weight: bold; line-height: 1.4;">{{ product.product_name }}</h3>
+      
+      <div class="product-info">
+        <p><strong>Código: </strong> <span class="text">{{ product.product_id }}</span></p>
+        
+        <!-- Descripción con tamaño de letra adecuado -->
+        <p><strong>Descripción: </strong> {{ product.product_description || 'No disponible' }}</p>
+        
+        <!-- Categoría con mayor tamaño de fuente -->
+        <p><strong>Categoría: </strong> <span class="badge bg-info" style="font-size: 1.2rem;">{{ product.product_category }}</span></p>
+        
+        <!-- Cantidad con mayor tamaño de fuente -->
+        <p><strong>Cantidad: </strong> <span class="badge bg-success" style="font-size: 1.2rem;">{{ product.product_quantity }}</span></p>
+        
+        <!-- Precio con mayor tamaño de fuente -->
+        <p><strong>Precio: </strong> <span class="text-success" style="font-size: 1.5rem;">{{ product.product_price | currency }}</span></p>
+      </div>
     </div>
-    <div *ngIf="!product">
-      <p>Cargando datos del producto...</p>
-    </div>
-    <button class="btn btn-primary mt-3" (click)="exportToPDF()">Exportar datos en PDF</button>
   </div>
-  
+
+  <div *ngIf="!product" class="alert alert-info mt-3" role="alert">
+    Cargando datos del producto...
+  </div>
+
+  <!-- Botón de Exportar -->
+  <button class="btn btn-primary mt-3 float-end" style="font-size: 1.5rem; padding: 10px 20px;" (click)="exportToPDF()">
+    <i class="fas fa-file-pdf"></i> Exportar a PDF
+  </button>
+</div>
